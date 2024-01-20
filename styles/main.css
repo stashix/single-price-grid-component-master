@@ -105,6 +105,10 @@ body {
     box-shadow: 0.25rem 0.25rem 0.825rem var(--clr-primary)
 }
 
+.single-price .sign-up a:hover {
+    text-decoration: underline;
+}
+
 .single-price .bullets {
     background-color: var(--clr-primary);
     color:white;
