@@ -1,0 +1,140 @@
+:root {
+    --clr-primary: hsl(179, 80%, 43%);
+    --clr-secondary: hsl(179, 62%, 43%);
+    --clr-highlight: hsl(71, 73%, 54%);
+    --clr-neutral-gray: hsl(204, 43%, 93%);
+    --clr-grayish-blue: hsl(218, 22%, 67%);
+    --card-radius: 0.5rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: var(--clr-neutral-gray);
+    background-color: var(--clr-neutral-gray);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+.single-price {
+    box-shadow: 0 0 1rem var(--clr-grayish-blue);
+    border-radius: var(--card-radius);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 40rem;
+}
+
+.single-price h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 0 0.825rem 0;
+}
+
+.single-price .shout-out {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    grid-column: 1/3;
+}
+
+.single-price .shout-out h1 {
+    color: var(--clr-primary);
+    font-weight: 700;
+    font-size: 1.625rem;
+    margin: 0 0 1rem 0;
+}
+
+.single-price .shout-out h2 {
+    color: var(--clr-highlight);
+}
+
+.single-price .shout-out p {
+    color: var(--clr-grayish-blue);
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.single-price .sign-up {
+    background-color: var(--clr-secondary);
+    color:white;
+    padding: 2rem;
+    border-radius: 0 0 0 var(--card-radius);
+}
+
+.single-price .sign-up p {
+    background-color: var(--clr-secondary);
+    margin: 0;
+    vertical-align: middle;
+}
+
+.single-price .sign-up p.price {
+    color: var(--clr-neutral-gray);
+    margin-bottom: 0.5rem;
+}
+
+.single-price .sign-up p.price span {
+    color: white;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-right: 0.325rem;
+    vertical-align: middle;
+}
+
+.single-price .sign-up a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--clr-highlight);
+    padding: 1rem;
+    display: block;
+    border-radius: 0.325rem;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 2rem;
+    box-shadow: 0.25rem 0.25rem 0.825rem var(--clr-primary)
+}
+
+.single-price .bullets {
+    background-color: var(--clr-primary);
+    color:white;
+    padding: 2rem;
+    border-radius: 0 0 var(--card-radius) 0;
+}
+
+.single-price .bullets ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.single-price .bullets li {
+    font-size: 0.825rem;
+    color: var(--clr-neutral-gray)
+}
+
+.single-price .bullets ul li + li {
+    margin-top: 0.325rem;
+}
+
+@media screen and (max-width: 34rem) {
+    .single-price .sign-up {
+        grid-column: 1/3;
+        border-radius: 0;
+    }
+
+    .single-price .bullets {
+        grid-column: 1/3;
+        border-radius: 0 0 var(--card-radius) var(--card-radius);
+    }
+}
